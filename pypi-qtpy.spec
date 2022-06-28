@@ -4,7 +4,7 @@
 #
 Name     : pypi-qtpy
 Version  : 2.1.0
-Release  : 45
+Release  : 46
 URL      : https://files.pythonhosted.org/packages/4f/8b/2830a11f0773dded3bb9943daeed7c1eefb214f84d72a213a5d4681430b2/QtPy-2.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4f/8b/2830a11f0773dded3bb9943daeed7c1eefb214f84d72a213a5d4681430b2/QtPy-2.1.0.tar.gz
 Summary  : Provides an abstraction layer on top of the various Qt bindings (PyQt5/6 and PySide2/6).
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656377998
+export SOURCE_DATE_EPOCH=1656403787
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
