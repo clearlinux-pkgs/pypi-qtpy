@@ -4,7 +4,7 @@
 #
 Name     : pypi-qtpy
 Version  : 2.2.0
-Release  : 49
+Release  : 50
 URL      : https://files.pythonhosted.org/packages/49/a0/4510b8f848eb2e3d8ed58bca8f876525db43e90812108fccddd16f8cc251/QtPy-2.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/49/a0/4510b8f848eb2e3d8ed58bca8f876525db43e90812108fccddd16f8cc251/QtPy-2.2.0.tar.gz
 Summary  : Provides an abstraction layer on top of the various Qt bindings (PyQt5/6 and PySide2/6).
