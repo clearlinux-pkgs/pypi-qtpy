@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-qtpy
-Version  : 2.3.1
-Release  : 56
-URL      : https://files.pythonhosted.org/packages/ad/6b/0e753af1197f82d2359c9aa91cef8abaaef4c547396ffdc71ea6a889e52c/QtPy-2.3.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/ad/6b/0e753af1197f82d2359c9aa91cef8abaaef4c547396ffdc71ea6a889e52c/QtPy-2.3.1.tar.gz
+Version  : 2.4.0
+Release  : 57
+URL      : https://files.pythonhosted.org/packages/1e/67/b3099c5f646bb42011a30c05f673e84cc82a72fbc1f9f2c271598ac97283/QtPy-2.4.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/1e/67/b3099c5f646bb42011a30c05f673e84cc82a72fbc1f9f2c271598ac97283/QtPy-2.4.0.tar.gz
 Summary  : Provides an abstraction layer on top of the various Qt bindings (PyQt5/6 and PySide2/6).
 Group    : Development/Tools
 License  : MIT
@@ -16,6 +16,7 @@ Requires: pypi-qtpy-license = %{version}-%{release}
 Requires: pypi-qtpy-python = %{version}-%{release}
 Requires: pypi-qtpy-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(setuptools)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -70,10 +71,10 @@ python3 components for the pypi-qtpy package.
 
 
 %prep
-%setup -q -n QtPy-2.3.1
-cd %{_builddir}/QtPy-2.3.1
+%setup -q -n QtPy-2.4.0
+cd %{_builddir}/QtPy-2.4.0
 pushd ..
-cp -a QtPy-2.3.1 buildavx2
+cp -a QtPy-2.4.0 buildavx2
 popd
 
 %build
@@ -81,15 +82,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680101997
+export SOURCE_DATE_EPOCH=1693409670
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
