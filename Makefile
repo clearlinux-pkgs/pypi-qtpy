@@ -1,5 +1,5 @@
 PKG_NAME := pypi-qtpy
-URL = https://files.pythonhosted.org/packages/1e/67/b3099c5f646bb42011a30c05f673e84cc82a72fbc1f9f2c271598ac97283/QtPy-2.4.0.tar.gz
+URL = https://files.pythonhosted.org/packages/eb/9a/7ce646daefb2f85bf5b9c8ac461508b58fa5dcad6d40db476187fafd0148/QtPy-2.4.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
