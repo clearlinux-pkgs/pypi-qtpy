@@ -7,7 +7,7 @@
 #
 Name     : pypi-qtpy
 Version  : 2.4.3
-Release  : 63
+Release  : 64
 URL      : https://files.pythonhosted.org/packages/70/01/392eba83c8e47b946b929d7c46e0f04b35e9671f8bb6fc36b6f7945b4de8/qtpy-2.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/70/01/392eba83c8e47b946b929d7c46e0f04b35e9671f8bb6fc36b6f7945b4de8/qtpy-2.4.3.tar.gz
 Summary  : Provides an abstraction layer on top of the various Qt bindings (PyQt5/6 and PySide2/6).
